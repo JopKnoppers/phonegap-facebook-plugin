@@ -129,7 +129,7 @@ cordova.define("com.phonegap.plugins.facebookconnect.FacebookConnectPlugin", fun
                 
                 // Try will catch errors when SDK has not been init
                 try {
-                    FB.api(graphPath, function (response) {
+                    FB.api(graphPath, {fields: permissions}, function (response) {
                         if (response.error) {
                             f(response);
                         } else {
